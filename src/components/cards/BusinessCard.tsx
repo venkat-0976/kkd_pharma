@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { MapPin, Phone, Store, Warehouse } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -11,7 +11,7 @@ import type { PublicBusiness } from "@/types/directory";
 export function BusinessCard({ business }: { business: PublicBusiness }) {
   const isRetailer = business.businessType === "Retailer";
   const Icon = isRetailer ? Store : Warehouse;
-  const detailPath = isRetailer ? "/retailers/$slug" : "/wholesalers/$slug";
+  const detailPath = isRetailer ? `/retailers/${business.slug}` : `/wholesalers/${business.slug}`;
 
   return (
     <article className="card-elevated card-elevated-hover flex h-full flex-col p-5">
@@ -58,9 +58,7 @@ export function BusinessCard({ business }: { business: PublicBusiness }) {
 
       <div className="mt-6 pt-1">
         <Button asChild variant="outline" className="w-full">
-          <Link to={detailPath} params={{ slug: business.slug }}>
-            View Business
-          </Link>
+          <Link to={detailPath}>View Business</Link>
         </Button>
       </div>
     </article>

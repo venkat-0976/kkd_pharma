@@ -11,7 +11,14 @@ interface SectionCardProps {
   icon?: LucideIcon;
 }
 
-export function SectionCard({ title, description, action, children, className, icon: Icon }: SectionCardProps) {
+export function SectionCard({
+  title,
+  description,
+  action,
+  children,
+  className,
+  icon: Icon,
+}: SectionCardProps) {
   return (
     <section className={cn("card-elevated overflow-hidden p-5 sm:p-7", className)}>
       <header className="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-3 border-b border-border/80 pb-5">

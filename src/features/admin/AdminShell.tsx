@@ -95,7 +95,12 @@ export function AdminShell({ children }: { children: ReactNode }) {
           <div className="absolute inset-y-0 left-0 w-72 max-w-[85%] overflow-y-auto border-r border-border bg-surface p-4">
             <div className="mb-4 flex items-center justify-between">
               <Logo />
-              <Button variant="ghost" size="icon" aria-label="Close menu" onClick={() => setDrawerOpen(false)}>
+              <Button
+                variant="ghost"
+                size="icon"
+                aria-label="Close menu"
+                onClick={() => setDrawerOpen(false)}
+              >
                 <X className="size-5" aria-hidden="true" />
               </Button>
             </div>

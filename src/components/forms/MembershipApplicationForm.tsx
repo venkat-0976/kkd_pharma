@@ -6,8 +6,17 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { membershipApplicationSchema, type MembershipApplicationValues } from "@/validation/publicForms";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import {
+  membershipApplicationSchema,
+  type MembershipApplicationValues,
+} from "@/validation/publicForms";
 
 export function MembershipApplicationForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -39,8 +48,8 @@ export function MembershipApplicationForm() {
         <CheckCircle2 className="mx-auto size-10 text-success" aria-hidden="true" />
         <h3 className="mt-4 text-lg font-semibold">Membership enquiry received</h3>
         <p className="mx-auto mt-2 max-w-md text-sm text-muted-foreground">
-          The union office will verify your firm details and contact you. Licence documents are collected
-          later inside the secure member portal — never through this public form.
+          The union office will verify your firm details and contact you. Licence documents are
+          collected later inside the secure member portal — never through this public form.
         </p>
       </div>
     );
@@ -108,7 +117,9 @@ export function MembershipApplicationForm() {
             aria-invalid={!!errors.mobile}
             {...register("mobile")}
           />
-          {errors.mobile ? <p className="mt-1.5 text-xs text-destructive">{errors.mobile.message}</p> : null}
+          {errors.mobile ? (
+            <p className="mt-1.5 text-xs text-destructive">{errors.mobile.message}</p>
+          ) : null}
         </div>
       </div>
 
@@ -122,17 +133,33 @@ export function MembershipApplicationForm() {
             aria-invalid={!!errors.email}
             {...register("email")}
           />
-          {errors.email ? <p className="mt-1.5 text-xs text-destructive">{errors.email.message}</p> : null}
+          {errors.email ? (
+            <p className="mt-1.5 text-xs text-destructive">{errors.email.message}</p>
+          ) : null}
         </div>
         <div>
           <Label htmlFor="join-area">Area</Label>
-          <Input id="join-area" className="mt-1.5" aria-invalid={!!errors.area} {...register("area")} />
-          {errors.area ? <p className="mt-1.5 text-xs text-destructive">{errors.area.message}</p> : null}
+          <Input
+            id="join-area"
+            className="mt-1.5"
+            aria-invalid={!!errors.area}
+            {...register("area")}
+          />
+          {errors.area ? (
+            <p className="mt-1.5 text-xs text-destructive">{errors.area.message}</p>
+          ) : null}
         </div>
         <div>
           <Label htmlFor="join-city">City</Label>
-          <Input id="join-city" className="mt-1.5" aria-invalid={!!errors.city} {...register("city")} />
-          {errors.city ? <p className="mt-1.5 text-xs text-destructive">{errors.city.message}</p> : null}
+          <Input
+            id="join-city"
+            className="mt-1.5"
+            aria-invalid={!!errors.city}
+            {...register("city")}
+          />
+          {errors.city ? (
+            <p className="mt-1.5 text-xs text-destructive">{errors.city.message}</p>
+          ) : null}
         </div>
       </div>
 

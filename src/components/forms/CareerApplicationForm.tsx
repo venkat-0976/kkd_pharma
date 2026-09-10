@@ -6,7 +6,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { listJobs } from "@/services/career/jobs.service";
 import {
   careerApplicationSchema,
@@ -76,8 +82,9 @@ export function CareerApplicationForm({ defaultPosition = "" }: CareerApplicatio
         <CheckCircle2 className="mx-auto size-10 text-success" aria-hidden="true" />
         <h3 className="mt-4 text-lg font-semibold">Application received</h3>
         <p className="mx-auto mt-2 max-w-md text-sm text-muted-foreground">
-          Thank you for applying to Kakinada Union. Our team reviews applications weekly and will contact
-          shortlisted candidates on the mobile number provided. Your resume is stored privately.
+          Thank you for applying to Kakinada Union. Our team reviews applications weekly and will
+          contact shortlisted candidates on the mobile number provided. Your resume is stored
+          privately.
         </p>
         <Button className="mt-6" variant="outline" onClick={() => setSubmitted(false)}>
           Submit another application
@@ -110,7 +117,9 @@ export function CareerApplicationForm({ defaultPosition = "" }: CareerApplicatio
             aria-invalid={!!errors.mobile}
             {...register("mobile")}
           />
-          {errors.mobile ? <p className="mt-1.5 text-xs text-destructive">{errors.mobile.message}</p> : null}
+          {errors.mobile ? (
+            <p className="mt-1.5 text-xs text-destructive">{errors.mobile.message}</p>
+          ) : null}
         </div>
       </div>
 
@@ -124,11 +133,16 @@ export function CareerApplicationForm({ defaultPosition = "" }: CareerApplicatio
             aria-invalid={!!errors.email}
             {...register("email")}
           />
-          {errors.email ? <p className="mt-1.5 text-xs text-destructive">{errors.email.message}</p> : null}
+          {errors.email ? (
+            <p className="mt-1.5 text-xs text-destructive">{errors.email.message}</p>
+          ) : null}
         </div>
         <div>
           <Label htmlFor="apply-position">Position applied for</Label>
-          <Select value={position} onValueChange={(v) => setValue("position", v, { shouldValidate: true })}>
+          <Select
+            value={position}
+            onValueChange={(v) => setValue("position", v, { shouldValidate: true })}
+          >
             <SelectTrigger id="apply-position" className="mt-1.5 w-full">
               <SelectValue placeholder="Select a position" />
             </SelectTrigger>

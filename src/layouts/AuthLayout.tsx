@@ -25,8 +25,8 @@ export function AuthLayout({ title, subtitle, children, footer }: AuthLayoutProp
             One secure portal for every member firm.
           </h2>
           <p className="mt-4 text-sm text-primary-foreground/80">
-            Licences, pharmacist records, documents and expiry reminders live behind authentication — never
-            on the public website.
+            Licences, pharmacist records, documents and expiry reminders live behind authentication
+            — never on the public website.
           </p>
           <ul className="mt-8 space-y-3 text-sm text-primary-foreground/85">
             {[

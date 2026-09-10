@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { Logo } from "@/components/common/Logo";
 import { brand, footerNav } from "@/config/navigation";
@@ -10,8 +10,8 @@ export function SiteFooter() {
         <div className="lg:col-span-2">
           <Logo />
           <p className="mt-4 max-w-sm text-sm text-muted-foreground">
-            Kakinada Union represents registered retail and wholesale pharmacy members with regulatory
-            support, professional development and a secure digital member portal.
+            Kakinada Union represents registered retail and wholesale pharmacy members with
+            regulatory support, professional development and a secure digital member portal.
           </p>
           <ul className="mt-5 space-y-2 text-sm text-muted-foreground">
             <li className="flex items-start gap-2">
@@ -55,7 +55,9 @@ export function SiteFooter() {
       <div className="border-t border-border">
         <div className="container-page flex flex-col gap-2 py-5 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} Kakinada Union. All rights reserved.</p>
-          <p>Member licences, documents and personal details are never published on this website.</p>
+          <p>
+            Member licences, documents and personal details are never published on this website.
+          </p>
         </div>
       </div>
     </footer>

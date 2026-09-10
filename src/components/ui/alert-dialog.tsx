@@ -44,7 +44,10 @@ const AlertDialogContent = React.forwardRef<
 AlertDialogContent.displayName = AlertDialogPrimitive.Content.displayName;
 
 const AlertDialogHeader = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) => (
-  <div className={cn("flex min-w-0 flex-col space-y-2 text-center sm:text-left", className)} {...props} />
+  <div
+    className={cn("flex min-w-0 flex-col space-y-2 text-center sm:text-left", className)}
+    {...props}
+  />
 );
 AlertDialogHeader.displayName = "AlertDialogHeader";
 
@@ -62,7 +65,10 @@ const AlertDialogTitle = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <AlertDialogPrimitive.Title
     ref={ref}
-    className={cn("text-lg font-semibold leading-snug break-words [overflow-wrap:anywhere]", className)}
+    className={cn(
+      "text-lg font-semibold leading-snug break-words [overflow-wrap:anywhere]",
+      className,
+    )}
     {...props}
   />
 ));

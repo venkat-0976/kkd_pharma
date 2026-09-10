@@ -32,8 +32,15 @@ export function ContactForm() {
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <Label htmlFor="contact-name">Full name</Label>
-          <Input id="contact-name" className="mt-1.5" aria-invalid={!!errors.name} {...register("name")} />
-          {errors.name ? <p className="mt-1.5 text-xs text-destructive">{errors.name.message}</p> : null}
+          <Input
+            id="contact-name"
+            className="mt-1.5"
+            aria-invalid={!!errors.name}
+            {...register("name")}
+          />
+          {errors.name ? (
+            <p className="mt-1.5 text-xs text-destructive">{errors.name.message}</p>
+          ) : null}
         </div>
         <div>
           <Label htmlFor="contact-mobile">Mobile number</Label>
@@ -44,7 +51,9 @@ export function ContactForm() {
             aria-invalid={!!errors.mobile}
             {...register("mobile")}
           />
-          {errors.mobile ? <p className="mt-1.5 text-xs text-destructive">{errors.mobile.message}</p> : null}
+          {errors.mobile ? (
+            <p className="mt-1.5 text-xs text-destructive">{errors.mobile.message}</p>
+          ) : null}
         </div>
       </div>
 
@@ -57,7 +66,9 @@ export function ContactForm() {
           aria-invalid={!!errors.email}
           {...register("email")}
         />
-        {errors.email ? <p className="mt-1.5 text-xs text-destructive">{errors.email.message}</p> : null}
+        {errors.email ? (
+          <p className="mt-1.5 text-xs text-destructive">{errors.email.message}</p>
+        ) : null}
       </div>
 
       <div>
@@ -68,7 +79,9 @@ export function ContactForm() {
           aria-invalid={!!errors.subject}
           {...register("subject")}
         />
-        {errors.subject ? <p className="mt-1.5 text-xs text-destructive">{errors.subject.message}</p> : null}
+        {errors.subject ? (
+          <p className="mt-1.5 text-xs text-destructive">{errors.subject.message}</p>
+        ) : null}
       </div>
 
       <div>
@@ -80,7 +93,9 @@ export function ContactForm() {
           aria-invalid={!!errors.message}
           {...register("message")}
         />
-        {errors.message ? <p className="mt-1.5 text-xs text-destructive">{errors.message.message}</p> : null}
+        {errors.message ? (
+          <p className="mt-1.5 text-xs text-destructive">{errors.message.message}</p>
+        ) : null}
       </div>
 
       <Button type="submit" disabled={isSubmitting} className="w-full sm:w-auto">

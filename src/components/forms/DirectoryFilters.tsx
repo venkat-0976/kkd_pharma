@@ -1,7 +1,13 @@
 import { Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 export interface DirectoryFilterState {
   query: string;
@@ -83,7 +89,10 @@ export function DirectoryFilters({
 
       <div>
         <Label htmlFor="directory-sort">Sort</Label>
-        <Select value={value.sort} onValueChange={(v) => set("sort", v as DirectoryFilterState["sort"])}>
+        <Select
+          value={value.sort}
+          onValueChange={(v) => set("sort", v as DirectoryFilterState["sort"])}
+        >
           <SelectTrigger id="directory-sort" className="mt-1.5 w-full">
             <SelectValue />
           </SelectTrigger>

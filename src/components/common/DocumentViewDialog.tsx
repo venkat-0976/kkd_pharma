@@ -32,7 +32,9 @@ export function DocumentViewDialog({ document, reminderDays, onOpenChange }: Pro
     <Dialog open={!!document} onOpenChange={onOpenChange}>
       <DialogContent className="max-h-[90dvh] overflow-y-auto sm:max-w-2xl">
         <DialogHeader className="min-w-0 pr-6">
-          <DialogTitle className="line-clamp-2 break-all">{document?.name ?? "Document"}</DialogTitle>
+          <DialogTitle className="line-clamp-2 break-all">
+            {document?.name ?? "Document"}
+          </DialogTitle>
           <DialogDescription>
             {document
               ? `${document.category} · ${document.fileType.toUpperCase()} · ${document.sizeKb} KB`
@@ -82,7 +84,8 @@ export function DocumentViewDialog({ document, reminderDays, onOpenChange }: Pro
           <Button
             onClick={() =>
               toast.info("Secure download", {
-                description: "Signed private download links are issued once the backend is connected.",
+                description:
+                  "Signed private download links are issued once the backend is connected.",
               })
             }
           >

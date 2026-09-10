@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
@@ -31,8 +31,6 @@ export function MobileNavDrawer() {
               key={item.to}
               to={item.to}
               onClick={close}
-              activeOptions={{ exact: item.to === "/" }}
-              activeProps={{ className: "bg-secondary text-secondary-foreground" }}
               className="rounded-lg px-3 py-3 text-sm font-medium transition-colors hover:bg-secondary"
             >
               {item.label}

@@ -341,9 +341,17 @@ export function ShopAddressForm({ address }: { address: ShopAddress }) {
         <div className="space-y-4">
           <div className="space-y-3">
             {addressRows.map((row) => (
-              <div key={row.map((field) => field.key).join("-")} className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3">
+              <div
+                key={row.map((field) => field.key).join("-")}
+                className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3"
+              >
                 {row.map((field) => (
-                  <AddressField key={String(field.key)} field={field} form={form} {...(field.key === "pincode" ? { inputMode: "numeric" as const } : {})} />
+                  <AddressField
+                    key={String(field.key)}
+                    field={field}
+                    form={form}
+                    {...(field.key === "pincode" ? { inputMode: "numeric" as const } : {})}
+                  />
                 ))}
               </div>
             ))}

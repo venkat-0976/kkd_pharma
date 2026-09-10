@@ -1,23 +1,19 @@
-import { useQuery, useQueryClient } from "@tanstack/react-query";
-import { memberService } from "@/services/member/member.service";
+import { useBusinessContext } from "@/contexts/BusinessContext";
 import { buildAlerts } from "@/services/member/member.service";
 
-export const memberRecordKey = ["member", "record"] as const;
-
 export function useMemberRecord() {
-  return useQuery({
-    queryKey: memberRecordKey,
-    queryFn: () => memberService.getRecord(),
-    staleTime: 10_000,
-  });
+  const { record, isLoading, error, refreshRecord } = useBusinessContext();
+  return {
+    data: record,
+    isLoading,
+    error,
+    refetch: refreshRecord,
+  };
 }
 
 export function useInvalidateMember() {
-  const queryClient = useQueryClient();
-  return () =>
-    queryClient.invalidateQueries({ queryKey: memberRecordKey }).then(() =>
-      queryClient.refetchQueries({ queryKey: memberRecordKey }),
-    );
+  const { refreshRecord } = useBusinessContext();
+  return () => refreshRecord();
 }
 
 export { buildAlerts };

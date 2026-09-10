@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { ArrowRight, LogIn, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/images/hero-pharmacy.jpg";
@@ -22,8 +22,9 @@ export function HeroSection() {
           </h1>
 
           <p className="mt-5 max-w-xl text-sm text-primary-foreground/80 sm:text-base">
-            We represent over 500 registered retail and wholesale pharmacy members with regulatory guidance,
-            professional development and a secure digital portal for every firm&apos;s licences and records.
+            We represent over 500 registered retail and wholesale pharmacy members with regulatory
+            guidance, professional development and a secure digital portal for every firm&apos;s
+            licences and records.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">

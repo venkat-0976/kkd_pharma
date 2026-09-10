@@ -25,7 +25,9 @@ export function PageHero({ eyebrow, title, description, children }: PageHeroProp
           {title}
         </h1>
         {description ? (
-          <p className="mt-4 max-w-2xl text-sm text-primary-foreground/80 sm:text-base">{description}</p>
+          <p className="mt-4 max-w-2xl text-sm text-primary-foreground/80 sm:text-base">
+            {description}
+          </p>
         ) : null}
         {children ? <div className="mt-7">{children}</div> : null}
       </div>

@@ -1,0 +1,6 @@
+{
+  "name": "Kakinada Pharmacy Union",
+  "description": "Pharmacy and healthcare association management portal for retailers, wholesalers, hospitals, labs, and blood banks in Kakinada.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

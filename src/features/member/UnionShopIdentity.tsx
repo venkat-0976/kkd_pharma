@@ -1,13 +1,7 @@
 import { getUnionByMemberId, type UnionBrand, type UnionSymbol } from "@/config/unions";
 import { cn } from "@/lib/utils";
 
-function UnionSymbolMark({
-  symbol,
-  className,
-}: {
-  symbol: UnionSymbol;
-  className?: string;
-}) {
+function UnionSymbolMark({ symbol, className }: { symbol: UnionSymbol; className?: string }) {
   return (
     <span
       className={cn(

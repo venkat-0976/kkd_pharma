@@ -4,11 +4,7 @@ import { labNav } from "@/modules/lab/navigation/labNav";
 
 export function LabLayout() {
   return (
-    <AuthenticatedPortalLayout
-      navItems={labNav}
-      roleName="Laboratory portal"
-      profileRoute="/lab"
-    >
+    <AuthenticatedPortalLayout navItems={labNav} roleName="Laboratory portal" profileRoute="/lab">
       <Outlet />
     </AuthenticatedPortalLayout>
   );
