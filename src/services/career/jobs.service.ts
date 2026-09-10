@@ -1,0 +1,98 @@
+import type { JobPosting } from "@/types/directory";
+
+/** Typed mock service for public job postings. */
+
+const jobs: JobPosting[] = [
+  {
+    slug: "pharmacist",
+    title: "Pharmacist",
+    department: "Retail Pharmacy",
+    location: "Kakinada",
+    employmentType: "Full-time",
+    experience: "1–5 years",
+    description:
+      "Dispense prescriptions, counsel patients and maintain statutory registers at a member retail pharmacy.",
+    requirements: ["B.Pharm / D.Pharm", "Valid pharmacist registration", "Telugu and English communication"],
+    postedOn: "2026-08-04",
+  },
+  {
+    slug: "pharmacy-assistant",
+    title: "Pharmacy Assistant",
+    department: "Retail Pharmacy",
+    location: "Kakinada",
+    employmentType: "Full-time",
+    experience: "0–2 years",
+    description: "Support billing, stock arrangement and customer service at the counter.",
+    requirements: ["Intermediate or above", "Basic computer billing knowledge"],
+    postedOn: "2026-08-06",
+  },
+  {
+    slug: "medical-representative",
+    title: "Medical Representative",
+    department: "Field Sales",
+    location: "East Godavari",
+    employmentType: "Full-time",
+    experience: "1–3 years",
+    description: "Cover assigned territory, build relationships with clinics and member pharmacies.",
+    requirements: ["Any degree", "Two-wheeler with licence", "Field sales aptitude"],
+    postedOn: "2026-07-29",
+  },
+  {
+    slug: "accountant",
+    title: "Accountant",
+    department: "Finance",
+    location: "Kakinada",
+    employmentType: "Full-time",
+    experience: "2–6 years",
+    description: "Handle GST filing, purchase entries and monthly reconciliation for member firms.",
+    requirements: ["B.Com / M.Com", "Tally and GST portal experience"],
+    postedOn: "2026-08-01",
+  },
+  {
+    slug: "store-manager",
+    title: "Store Manager",
+    department: "Operations",
+    location: "Kakinada",
+    employmentType: "Full-time",
+    experience: "3–8 years",
+    description: "Own stock planning, expiry control and staff scheduling for a wholesale godown.",
+    requirements: ["Graduate", "Inventory software experience", "Team handling"],
+    postedOn: "2026-07-24",
+  },
+  {
+    slug: "sales-executive",
+    title: "Sales Executive",
+    department: "Wholesale",
+    location: "Kakinada",
+    employmentType: "Full-time",
+    experience: "1–4 years",
+    description: "Manage distributor orders and retailer relationships for member wholesalers.",
+    requirements: ["Graduate", "Negotiation skills"],
+    postedOn: "2026-08-10",
+  },
+  {
+    slug: "healthcare-professional",
+    title: "Healthcare Professional",
+    department: "Clinical Services",
+    location: "Kakinada",
+    employmentType: "Part-time",
+    experience: "2+ years",
+    description: "Support health camps, screening drives and community awareness programmes.",
+    requirements: ["Relevant clinical qualification", "Camp / community experience"],
+    postedOn: "2026-08-12",
+  },
+  {
+    slug: "it-support",
+    title: "IT Support",
+    department: "Technology",
+    location: "Kakinada",
+    employmentType: "Full-time",
+    experience: "1–3 years",
+    description: "Maintain billing systems, member portal access and hardware for the union office.",
+    requirements: ["Diploma / B.Tech", "Windows and network troubleshooting"],
+    postedOn: "2026-08-14",
+  },
+];
+
+export const listJobs = (): JobPosting[] => jobs;
+export const getJobBySlug = (slug: string): JobPosting | undefined => jobs.find((j) => j.slug === slug);
