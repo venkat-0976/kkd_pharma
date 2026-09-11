@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import { AuthenticatedPortalLayout } from "@/layouts/AuthenticatedPortalLayout";
+import { AuthenticatedPortalLayout } from "./AuthenticatedPortalLayout";
 import { wholesalerNav, wholesalerMobileNav } from "@/modules/wholesaler/navigation/wholesalerNav";
 
 export function WholesalerLayout() {
@@ -16,5 +16,3 @@ export function WholesalerLayout() {
     </AuthenticatedPortalLayout>
   );
 }
-
-export default WholesalerLayout;

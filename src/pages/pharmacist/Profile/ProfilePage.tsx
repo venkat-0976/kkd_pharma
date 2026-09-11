@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Skeleton } from "@/components/ui/skeleton";
-import { MemberPageHeader } from "@/layouts/AuthenticatedPortalLayout";
+import { MemberPageHeader } from "@/components/layout/AuthenticatedPortalLayout";
 import { SectionCard, FieldList } from "@/components/common/SectionCard";
 import { useMemberRecord, useInvalidateMember } from "@/hooks/useMemberRecord";
 import { memberService } from "@/services/member/member.service";

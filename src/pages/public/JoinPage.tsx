@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { PublicLayout } from "@/components/layout/PublicLayout";
 import { PageHero } from "@/components/common/PageHero";
 import { PrivacyNotice } from "@/components/common/PrivacyNotice";
-import { MembershipApplicationForm } from "@/components/forms/MembershipApplicationForm";
+import { MembershipApplicationForm } from "@/components/common/MembershipApplicationForm";
 
 const benefits = [
   "Regulatory and licence renewal support",

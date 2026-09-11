@@ -13,7 +13,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
-import { MemberPageHeader } from "@/layouts/AuthenticatedPortalLayout";
+import { MemberPageHeader } from "@/components/layout/AuthenticatedPortalLayout";
 import { EmployeeDialog } from "@/components/common/EmployeeDialog";
 import { EmptyState } from "@/components/common/EmptyState";
 import { useInvalidateMember, useMemberRecord } from "@/hooks/useMemberRecord";

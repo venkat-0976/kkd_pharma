@@ -2,8 +2,8 @@ import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import { PublicLayout } from "@/components/layout/PublicLayout";
 import { PageHero } from "@/components/common/PageHero";
 import { SectionHeading } from "@/components/common/SectionHeading";
-import { ContactForm } from "@/components/forms/ContactForm";
-import { brand } from "@/config/navigation";
+import { ContactForm } from "@/components/common/ContactForm";
+import { brand } from "@/utils/navigation";
 
 const details = [
   { icon: MapPin, label: "Office", value: brand.address },

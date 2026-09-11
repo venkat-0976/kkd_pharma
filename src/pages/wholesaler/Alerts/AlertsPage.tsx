@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { BellRing, CalendarClock } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
-import { MemberPageHeader } from "@/layouts/AuthenticatedPortalLayout";
+import { MemberPageHeader } from "@/components/layout/AuthenticatedPortalLayout";
 import { StatusBadge } from "@/components/common/StatusBadge";
 import { EmptyState } from "@/components/common/EmptyState";
 import { useMemberRecord } from "@/hooks/useMemberRecord";

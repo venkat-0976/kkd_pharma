@@ -11,7 +11,7 @@ import { SectionCard, FieldList } from "@/components/common/SectionCard";
 import { ShopAddressForm } from "@/components/common/ShopAddressForm";
 import { useMemberRecord, useInvalidateMember } from "@/hooks/useMemberRecord";
 import { memberService } from "@/services/member/member.service";
-import { businessProfileSchema, type BusinessProfileValues } from "@/validation/memberForms";
+import { businessProfileSchema, type BusinessProfileValues } from "@/utils/validation/memberForms";
 import { cn } from "@/lib/utils";
 
 const statusTone: Record<string, string> = {

@@ -29,12 +29,12 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
-import { MemberPageHeader } from "@/layouts/AuthenticatedPortalLayout";
+import { MemberPageHeader } from "@/components/layout/AuthenticatedPortalLayout";
 import { DocumentViewDialog } from "@/components/common/DocumentViewDialog";
 import { EmptyState } from "@/components/common/EmptyState";
 import { useInvalidateMember, useMemberRecord } from "@/hooks/useMemberRecord";
 import { memberService } from "@/services/member/member.service";
-import { DOCUMENT_CATEGORIES, documentsForVault } from "@/config/licenceFields";
+import { DOCUMENT_CATEGORIES, documentsForVault } from "@/utils/licenceFields";
 import { formatDate } from "@/lib/expiry";
 import type { MemberDocument } from "@/types/member";
 

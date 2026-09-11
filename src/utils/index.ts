@@ -10,4 +10,3 @@ export {
 export { getInitials } from "./initials";
 export { reverseGeocodeCoordinate, lookupPostalCode, formatCoordinate } from "./reverseGeocode";
 export * from "./validation";
-

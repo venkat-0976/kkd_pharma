@@ -19,7 +19,7 @@ import {
   type DocumentUploadPayload,
 } from "@/components/common/DocumentUploadDialog";
 import { PersonPhotoUpload } from "@/components/common/PersonPhotoUpload";
-import { pharmacistSchema, type PharmacistValues } from "@/validation/memberForms";
+import { pharmacistSchema, type PharmacistValues } from "@/utils/validation/memberForms";
 import type { MemberDocument, Pharmacist } from "@/types/member";
 
 interface PharmacistDialogProps {

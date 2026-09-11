@@ -5,7 +5,7 @@ import {
   type AuthCredentials,
   type Role,
   type LoginType,
-} from "@/services/auth";
+} from "@/services/auth/auth.service";
 
 interface AuthContextType {
   session: Session | null;

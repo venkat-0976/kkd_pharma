@@ -25,9 +25,9 @@ import {
   licenceFieldConfig,
   licenceKindByCategory,
   pharmacistUploadFields,
-} from "@/config/licenceFields";
+} from "@/utils/licenceFields";
 import type { DocumentCategory, LicenceRecord, MemberDocument, Pharmacist } from "@/types/member";
-import type { LicenceValues, PharmacistValues } from "@/validation/memberForms";
+import type { LicenceValues, PharmacistValues } from "@/utils/validation/memberForms";
 
 const MAX_MB = 5;
 const ALLOWED = ["application/pdf", "image/jpeg", "image/png"];

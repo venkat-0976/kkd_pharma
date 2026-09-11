@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { PublicLayout } from "@/components/layout/PublicLayout";
 import { PageHero } from "@/components/common/PageHero";
-import { ServiceCard } from "@/components/cards/ServiceCard";
+import { ServiceCard } from "@/components/common/ServiceCard";
 import { SectionHeading } from "@/components/common/SectionHeading";
 import { listServices } from "@/services/association/association.service";
 

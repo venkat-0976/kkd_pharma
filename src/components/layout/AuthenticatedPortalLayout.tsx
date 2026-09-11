@@ -25,7 +25,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
-import { getUnionByMemberId, type UnionBrand } from "@/config/unions";
+import { getUnionByMemberId, type UnionBrand } from "@/utils/unions";
 import { authService } from "@/services/auth/auth.service";
 import { useMemberRecord } from "@/hooks/useMemberRecord";
 import { buildAlerts } from "@/services/member/member.service";

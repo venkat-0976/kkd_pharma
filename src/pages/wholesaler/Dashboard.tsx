@@ -11,7 +11,7 @@ import {
   ArrowRight,
   Warehouse,
 } from "lucide-react";
-import { MemberPageHeader } from "@/layouts/AuthenticatedPortalLayout";
+import { MemberPageHeader } from "@/components/layout/AuthenticatedPortalLayout";
 import { WholesalerOverviewCard } from "@/components/wholesaler/WholesalerOverviewCard";
 import { useMemberRecord } from "@/hooks/useMemberRecord";
 import { Skeleton } from "@/components/ui/skeleton";

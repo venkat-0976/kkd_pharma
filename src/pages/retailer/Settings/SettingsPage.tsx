@@ -9,7 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Progress } from "@/components/ui/progress";
-import { MemberPageHeader } from "@/layouts/AuthenticatedPortalLayout";
+import { MemberPageHeader } from "@/components/layout/AuthenticatedPortalLayout";
 import { SectionCard } from "@/components/common/SectionCard";
 import { useMemberRecord } from "@/hooks/useMemberRecord";
 import { memberService } from "@/services/member/member.service";
@@ -18,7 +18,7 @@ import {
   changePasswordSchema,
   passwordStrength,
   type ChangePasswordValues,
-} from "@/validation/memberForms";
+} from "@/utils/validation/memberForms";
 
 export function SettingsPage() {
   const { data: record, isLoading } = useMemberRecord();

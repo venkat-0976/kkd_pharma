@@ -6,13 +6,7 @@ export interface AssociationStat {
 export interface AssociationService {
   title: string;
   description: string;
-  icon:
-    | "pill"
-    | "users"
-    | "network"
-    | "shield"
-    | "graduation"
-    | "newspaper";
+  icon: "pill" | "users" | "network" | "shield" | "graduation" | "newspaper";
 }
 
 export function listStats(): AssociationStat[] {

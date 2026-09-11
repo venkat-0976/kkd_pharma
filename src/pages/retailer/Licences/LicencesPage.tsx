@@ -13,7 +13,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
-import { MemberPageHeader } from "@/layouts/AuthenticatedPortalLayout";
+import { MemberPageHeader } from "@/components/layout/AuthenticatedPortalLayout";
 import { LicenceCard } from "@/components/common/LicenceCard";
 import { DocumentUploadDialog } from "@/components/common/DocumentUploadDialog";
 import { DocumentViewDialog } from "@/components/common/DocumentViewDialog";
@@ -23,7 +23,7 @@ import {
   documentsForLicence,
   licenceCategoryByKind,
   licenceFieldConfig,
-} from "@/config/licenceFields";
+} from "@/utils/licenceFields";
 import type { DocumentCategory, LicenceKind, MemberDocument } from "@/types/member";
 
 const kinds: LicenceKind[] = ["drug", "gst", "food", "labour", "healthcare"];

@@ -12,7 +12,11 @@ const jobs: JobPosting[] = [
     experience: "1–5 years",
     description:
       "Dispense prescriptions, counsel patients and maintain statutory registers at a member retail pharmacy.",
-    requirements: ["B.Pharm / D.Pharm", "Valid pharmacist registration", "Telugu and English communication"],
+    requirements: [
+      "B.Pharm / D.Pharm",
+      "Valid pharmacist registration",
+      "Telugu and English communication",
+    ],
     postedOn: "2026-08-04",
   },
   {
@@ -33,7 +37,8 @@ const jobs: JobPosting[] = [
     location: "East Godavari",
     employmentType: "Full-time",
     experience: "1–3 years",
-    description: "Cover assigned territory, build relationships with clinics and member pharmacies.",
+    description:
+      "Cover assigned territory, build relationships with clinics and member pharmacies.",
     requirements: ["Any degree", "Two-wheeler with licence", "Field sales aptitude"],
     postedOn: "2026-07-29",
   },
@@ -88,11 +93,13 @@ const jobs: JobPosting[] = [
     location: "Kakinada",
     employmentType: "Full-time",
     experience: "1–3 years",
-    description: "Maintain billing systems, member portal access and hardware for the union office.",
+    description:
+      "Maintain billing systems, member portal access and hardware for the union office.",
     requirements: ["Diploma / B.Tech", "Windows and network troubleshooting"],
     postedOn: "2026-08-14",
   },
 ];
 
 export const listJobs = (): JobPosting[] => jobs;
-export const getJobBySlug = (slug: string): JobPosting | undefined => jobs.find((j) => j.slug === slug);
+export const getJobBySlug = (slug: string): JobPosting | undefined =>
+  jobs.find((j) => j.slug === slug);

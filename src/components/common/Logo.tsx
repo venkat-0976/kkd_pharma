@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { brand } from "@/config/navigation";
+import { brand } from "@/utils/navigation";
 import { cn } from "@/lib/utils";
 
 interface LogoProps {

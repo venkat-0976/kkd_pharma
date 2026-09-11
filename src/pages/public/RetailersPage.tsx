@@ -1,8 +1,8 @@
 import { PublicLayout } from "@/components/layout/PublicLayout";
 import { PageHero } from "@/components/common/PageHero";
 import { PrivacyNotice } from "@/components/common/PrivacyNotice";
-import { DirectoryGrid } from "@/features/directory/DirectoryGrid";
-import { ComplianceNoticeDialog } from "@/features/directory/ComplianceNoticeDialog";
+import { DirectoryGrid } from "@/components/common/DirectoryGrid";
+import { ComplianceNoticeDialog } from "@/components/common/ComplianceNoticeDialog";
 import { listRetailerAreas, listRetailers } from "@/services/directory/retailers.service";
 
 export function RetailersPage() {

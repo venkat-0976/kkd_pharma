@@ -10,7 +10,7 @@ import {
   AlertTriangle,
   ArrowRight,
 } from "lucide-react";
-import { MemberPageHeader } from "@/layouts/AuthenticatedPortalLayout";
+import { MemberPageHeader } from "@/components/layout/AuthenticatedPortalLayout";
 import { RetailerOverviewCard } from "@/components/retailer/RetailerOverviewCard";
 import { useMemberRecord } from "@/hooks/useMemberRecord";
 import { Skeleton } from "@/components/ui/skeleton";

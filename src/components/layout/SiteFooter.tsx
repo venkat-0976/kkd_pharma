@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { Logo } from "@/components/common/Logo";
-import { brand, footerNav } from "@/config/navigation";
+import { brand, footerNav } from "@/utils/navigation";
 
 export function SiteFooter() {
   return (

@@ -10,7 +10,7 @@ import {
   Phone,
   Mail,
 } from "lucide-react";
-import { MemberPageHeader } from "@/layouts/AuthenticatedPortalLayout";
+import { MemberPageHeader } from "@/components/layout/AuthenticatedPortalLayout";
 import { PharmacistOverviewCard } from "@/components/pharmacist/PharmacistOverviewCard";
 import { useMemberRecord } from "@/hooks/useMemberRecord";
 import { Skeleton } from "@/components/ui/skeleton";

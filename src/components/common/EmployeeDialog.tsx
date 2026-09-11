@@ -15,7 +15,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { PersonPhotoUpload } from "@/components/common/PersonPhotoUpload";
-import { employeeSchema, type EmployeeValues } from "@/validation/memberForms";
+import { employeeSchema, type EmployeeValues } from "@/utils/validation/memberForms";
 import type { Employee } from "@/types/member";
 
 interface EmployeeDialogProps {

@@ -1,10 +1,10 @@
 import { PublicLayout } from "@/components/layout/PublicLayout";
-import { HeroSection } from "@/features/home/HeroSection";
-import { StatsSection } from "@/features/home/StatsSection";
-import { ServicesSection } from "@/features/home/ServicesSection";
-import { FeaturedRetailers } from "@/features/home/FeaturedRetailers";
-import { FeaturedWholesalers } from "@/features/home/FeaturedWholesalers";
-import { MemberCta } from "@/features/home/MemberCta";
+import { HeroSection } from "@/components/common/HeroSection";
+import { StatsSection } from "@/components/common/StatsSection";
+import { ServicesSection } from "@/components/common/ServicesSection";
+import { FeaturedRetailers } from "@/components/common/FeaturedRetailers";
+import { FeaturedWholesalers } from "@/components/common/FeaturedWholesalers";
+import { MemberCta } from "@/components/common/MemberCta";
 
 export function HomePage() {
   return (

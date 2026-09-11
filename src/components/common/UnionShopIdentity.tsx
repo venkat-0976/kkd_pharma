@@ -1,4 +1,4 @@
-import { getUnionByMemberId, type UnionBrand, type UnionSymbol } from "@/config/unions";
+import { getUnionByMemberId, type UnionBrand, type UnionSymbol } from "@/utils/unions";
 import { cn } from "@/lib/utils";
 
 function UnionSymbolMark({ symbol, className }: { symbol: UnionSymbol; className?: string }) {

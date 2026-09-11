@@ -22,7 +22,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { PersonPhotoUpload } from "@/components/common/PersonPhotoUpload";
-import { ownerSchema, type OwnerValues } from "@/validation/memberForms";
+import { ownerSchema, type OwnerValues } from "@/utils/validation/memberForms";
 import type { Owner } from "@/types/member";
 
 interface OwnerDialogProps {

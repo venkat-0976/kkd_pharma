@@ -1,5 +1,5 @@
 import { MessageCircle } from "lucide-react";
-import { brand } from "@/config/navigation";
+import { brand } from "@/utils/navigation";
 
 /** Digits-only WhatsApp number for the union office. */
 const WHATSAPP_NUMBER = "918842001180";

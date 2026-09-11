@@ -17,7 +17,8 @@ const retailers: PublicBusiness[] = [
     area: "Bhanugudi",
     city: "Kakinada",
     publicPhone: "+91 884 236 1122",
-    about: "Neighbourhood retail pharmacy serving Bhanugudi with round-the-clock essential medicines.",
+    about:
+      "Neighbourhood retail pharmacy serving Bhanugudi with round-the-clock essential medicines.",
     established: 2004,
     categories: ["Retail Pharmacy", "24x7"],
   },

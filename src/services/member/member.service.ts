@@ -1,7 +1,7 @@
 import { memberSeed, blankRecord } from "./member.seed";
 import { authService } from "@/services/auth/auth.service";
 import { expiryStatus, daysUntil } from "@/lib/expiry";
-import { licenceKindByCategory } from "@/config/licenceFields";
+import { licenceKindByCategory } from "@/utils/licenceFields";
 import type {
   ExpiryAlert,
   MemberDocument,
@@ -99,25 +99,31 @@ export interface MemberService {
     sizeKb: number;
     expiryDate?: string | undefined;
     replaceId?: string | undefined;
-    licenceValues?: {
-      number?: string | undefined;
-      licenceType?: string | undefined;
-      registrationInfo?: string | undefined;
-      issueDate?: string | undefined;
-      expiryDate?: string | undefined;
-    } | undefined;
-    pharmacistValues?: {
-      fullName: string;
-      mobile: string;
-      licenceNumber: string;
-      licenceExpiry: string;
-      address: string;
-      photo?: string | undefined;
-      id?: string | undefined;
-    } | undefined;
+    licenceValues?:
+      | {
+          number?: string | undefined;
+          licenceType?: string | undefined;
+          registrationInfo?: string | undefined;
+          issueDate?: string | undefined;
+          expiryDate?: string | undefined;
+        }
+      | undefined;
+    pharmacistValues?:
+      | {
+          fullName: string;
+          mobile: string;
+          licenceNumber: string;
+          licenceExpiry: string;
+          address: string;
+          photo?: string | undefined;
+          id?: string | undefined;
+        }
+      | undefined;
   }): Promise<MemberDocument[]>;
   deleteDocument(id: string): Promise<MemberDocument[]>;
-  savePreferences(prefs: Omit<NotificationPreferences, "memberId">): Promise<NotificationPreferences>;
+  savePreferences(
+    prefs: Omit<NotificationPreferences, "memberId">,
+  ): Promise<NotificationPreferences>;
   getAlerts(): Promise<ExpiryAlert[]>;
   changePassword(input: { currentPassword: string; newPassword: string }): Promise<void>;
 }
@@ -199,7 +205,12 @@ export const memberService: MemberService = {
   async saveLicence(kind, patch) {
     await delay();
     const record = loadRecord();
-    record.licences[kind] = { ...record.licences[kind], ...patch, kind, memberId: record.profile.memberId };
+    record.licences[kind] = {
+      ...record.licences[kind],
+      ...patch,
+      kind,
+      memberId: record.profile.memberId,
+    };
     saveRecord(record);
     return record.licences[kind];
   },
@@ -248,7 +259,9 @@ export const memberService: MemberService = {
         memberId,
         documentId: doc.id,
         ...(licenceValues?.number !== undefined ? { number: licenceValues.number } : {}),
-        ...(licenceValues?.licenceType !== undefined ? { licenceType: licenceValues.licenceType } : {}),
+        ...(licenceValues?.licenceType !== undefined
+          ? { licenceType: licenceValues.licenceType }
+          : {}),
         ...(licenceValues?.registrationInfo !== undefined
           ? { registrationInfo: licenceValues.registrationInfo }
           : {}),
@@ -347,8 +360,18 @@ export function buildAlerts(record: MemberRecord): ExpiryAlert[] {
     });
   };
 
-  push("Drug Licence", "Drug Licence", record.licences.drug.expiryDate, record.licences.drug.documentId);
-  push("Food Licence", "Food Licence", record.licences.food.expiryDate, record.licences.food.documentId);
+  push(
+    "Drug Licence",
+    "Drug Licence",
+    record.licences.drug.expiryDate,
+    record.licences.drug.documentId,
+  );
+  push(
+    "Food Licence",
+    "Food Licence",
+    record.licences.food.expiryDate,
+    record.licences.food.documentId,
+  );
   push("Labour Registration", "Labour", record.licences.labour.expiryDate);
   push(
     "Healthcare Professional ID",

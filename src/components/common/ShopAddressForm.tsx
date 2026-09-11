@@ -10,7 +10,7 @@ import { Label } from "@/components/ui/label";
 import { SectionCard } from "@/components/common/SectionCard";
 import { useInvalidateMember } from "@/hooks/useMemberRecord";
 import { memberService } from "@/services/member/member.service";
-import { addressSchema, type AddressValues } from "@/validation/memberForms";
+import { addressSchema, type AddressValues } from "@/utils/validation/memberForms";
 import type { ShopAddress } from "@/types/member";
 import {
   lookupAddressByPincode,

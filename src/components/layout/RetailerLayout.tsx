@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import { AuthenticatedPortalLayout } from "@/layouts/AuthenticatedPortalLayout";
+import { AuthenticatedPortalLayout } from "./AuthenticatedPortalLayout";
 import { retailerNav, retailerMobileNav } from "@/modules/retailer/navigation/retailerNav";
 
 export function RetailerLayout() {
@@ -16,5 +16,3 @@ export function RetailerLayout() {
     </AuthenticatedPortalLayout>
   );
 }
-
-export default RetailerLayout;

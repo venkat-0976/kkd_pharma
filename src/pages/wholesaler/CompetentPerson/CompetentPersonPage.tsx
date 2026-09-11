@@ -13,7 +13,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
-import { MemberPageHeader } from "@/layouts/AuthenticatedPortalLayout";
+import { MemberPageHeader } from "@/components/layout/AuthenticatedPortalLayout";
 import { PharmacistDialog } from "@/components/common/PharmacistDialog";
 import { DocumentViewDialog } from "@/components/common/DocumentViewDialog";
 import { StatusBadge } from "@/components/common/StatusBadge";

@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { daysUntil, expiryStatus, formatDate, statusLabel } from "@/lib/expiry";
-import { licenceSchema, type LicenceValues } from "@/validation/memberForms";
+import { licenceSchema, type LicenceValues } from "@/utils/validation/memberForms";
 import { cn } from "@/lib/utils";
 import type { ExpiryStatus, LicenceRecord, MemberDocument } from "@/types/member";
 

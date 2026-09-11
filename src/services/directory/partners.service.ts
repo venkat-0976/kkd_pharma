@@ -9,7 +9,8 @@ const hospitals: PublicOrganisation[] = [
     category: "Multi-speciality",
     area: "Suryarao Peta",
     city: "Kakinada",
-    description: "District referral hospital partnered with the union for emergency medicine supply.",
+    description:
+      "District referral hospital partnered with the union for emergency medicine supply.",
     specialities: ["Emergency", "General Medicine", "Surgery"],
   },
   {

@@ -2,8 +2,8 @@ import { Link, useLocation } from "react-router-dom";
 import { Mail, Phone, LogIn } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/common/Logo";
-import { MobileNavDrawer } from "@/components/navigation/MobileNavDrawer";
-import { brand, primaryNav } from "@/config/navigation";
+import { MobileNavDrawer } from "@/components/common/MobileNavDrawer";
+import { brand, primaryNav } from "@/utils/navigation";
 
 export function SiteHeader() {
   const location = useLocation();

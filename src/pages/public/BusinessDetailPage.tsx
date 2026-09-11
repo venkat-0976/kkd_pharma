@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { PublicLayout } from "@/components/layout/PublicLayout";
-import { BusinessDetail } from "@/features/directory/BusinessDetail";
+import { BusinessDetail } from "@/components/common/BusinessDetail";
 import { getRetailerBySlug } from "@/services/directory/retailers.service";
 import { getWholesalerBySlug } from "@/services/directory/wholesalers.service";
 import { Button } from "@/components/ui/button";
